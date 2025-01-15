@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 variables project</title>
+</head>
+
+<body>
+    <button onclick="
+        console.log(`cart quantity : ${cart}`);
+        ">Show Quantity</button>
+    <button onclick="
+    if(cart < 10){
+        cart += 1;
+    } else{
+    console.log('items limit exceeded');
+    }
+    console.log(`cart quantity : ${cart}`);">Add To Cart</button>
+    <button onclick="
+     if(cart < 10){
+        cart += 2;
+    } else{
+    console.log('items limit exceeded');
+    }
+    console.log(`cart quantity : ${cart}`);">+2</button>
+    <button onclick="
+    if(cart < 10){
+        cart += 3;
+    } else{
+    console.log('items limit exceeded');
+    }
+    console.log(`cart quantity : ${cart}`);">+3</button>
+    <button onclick="
+    if(cart == 0){
+        console.log('no items');
+    }
+    else{
+    cart -= 2;
+}
+    console.log(`cart quantity : ${cart}`);" 
+    >-2</button>
+    <button
+    onclick=" if(cart==0){ console.log('no items'); } else{ cart -=3; }console.log(`cart quantity : ${cart}`);
+        ">-3</button>
+    <button onclick="
+    cart = 0;
+    console.log(`cart quantity : ${cart}`);">Reset Cart</button>
+    <button onclick="
+    console.clear();
+    ">Clear Console</button>
+</body>
+<script>
+    let cart = 0;
+    console.log('Cart')
+    // // camel case
+    // let cart = 0;
+    // // pascal case
+    // let CartQuantity = 0;
+    // // kebab case in html css and others
+    // // let cart-quantity = 0;
+    // // snake case
+    // let cart_quantity = 0;
+</script>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 - Boolean and if statements</title>
+</head>
+<body>
+    <h1>6 - Boolean and If statements</h1>
+</body>
+<script>
+    // console.log(typeof 'true');
+    // console.log(typeof false);
+    
+    // console.log(3 < 5);
+    // console.log(3 > 5);
+
+    // console.log(`str and float double eq ${5 == 5.00}`);
+    // console.log(5.00 == '5');
+    // console.log(5.00 === '5');
+
+    // // == check value
+    // // === check value and data type
+
+    // // [()] -> [* /] -> [+ -] -> [comparison] -> [logical]
+
+    // if (false){
+    //     console.log('hello');
+    // }
+    // else{
+    //     console.log('bhai tera ghoda he lambi race ka');
+    // }
+
+    // console.log('checking AGE -------------------');
+    // const age = 15;
+    // if(age >= 16){
+    //     console.log('can drive');
+    // }
+    // else if(age >= 14){
+    //     console.log('learning license');
+    // }
+    // else{
+    //     console.log('cannot drive');
+    // }
+    // console.log(true && true);
+    // console.log(true && false);
+    // console.log(true || true);
+    // console.log(true || false);
+
+    // console.log(0.2 >= 0 && 0.2 < 1/3); 
+    // console.log(!true);
+
+
+    // truthy and falsy values
+    // if(5){
+    //     console.log(`Truthy
+    //     falsy are - false , 0 , '' , NaN , undefined , null
+    //     `);
+    // }
+    // if(0){
+    //     console.log('Falsy');
+    // }
+
+    // const cartQuantity = 5;
+    // if(cartQuantity){
+    //     console.log('cart has products truthy as cartQuantity is 5');
+    // }
+    // console.log(!0);
+
+    // console.log(5/0);
+    // console.log(5/'lol');
+    // let v1;
+    // console.log(v1);
+    // we have to initialize const 
+
+    // ternary op
+
+    let result = true ? 'truthy' : 'falsy';
+    console.log(result);
+
+    // Guard && op
+    const message = 5 && console.log('hello');
+    console.log(message);
+    // doesnt even run the code as the first statement is false/falsy
+
+    // default || op
+    // checks if atleast one side is truthy/true
+
+    const currency = 'EUR' || 'USD';
+    console.log(currency);
+    const c = undefined || 'USD';
+    console.log(c);
+
+</script>
+</html>

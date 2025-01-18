@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-excersise</title>
+</head>
+<body>
+    <h1>7-excersise</h1>
+</body>
+<script>
+    function greet(name){
+        if (!name){
+            console.log('hi there!');
+        }
+        else{
+        console.log(`hello ${name}!`);
+        }
+    }
+    greet();
+
+    function convertToFarenheit(celsius){
+        console.log((celsius * (9/5) + 32));
+    }
+    // convertToFarenheit(25);
+    function convertToCelsius(farenheit){
+        console.log((farenheit - 32) * (5/9));
+    }
+    // convertToCelsius(77);
+    // convertToFarenheit(25);
+    function convertTemp(value,type){
+        if(type == 'c'){
+            convertToFarenheit(value);
+        }
+        else{
+            convertToCelsius(value);
+        }
+    }
+    // convertToCelsius(77);
+
+    // convertTemp(25,'c');
+    // convertTemp(77,'f');
+
+    function convertLength(length,from,to){
+        if((from != 'miles' || from != 'km' || from != 'feet') && (to != 'miles' || to != 'km' || to != 'feet')){
+            console.log('invalid unit');
+        }
+        else if(from === 'miles' && to == 'km'){
+            console.log(length * 1.6);
+        }
+        else if(from === 'km' && to == 'miles'){
+            console.log(length / 1.6);
+        }
+        else if(from == to){
+            console.log(`length : ${length} ${from}`);
+        }
+    }
+
+    convertLength(50,'miles','km');
+    convertLength(32,'km','miles');
+    convertLength(50,'km','km');
+    convertLength(50,'lbs','km');
+    
+</script>
+</html>

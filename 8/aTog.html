@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 excersise</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 8a
+    const product = {
+        name : 'basketball',
+        price : 2095
+    };
+    console.log(product);
+    
+    // 8b
+    product.price += 500;
+    console.log(product);
+    console.log(product.price);
+    
+    // 8c
+    product['delivery-time'] = '1 day';
+    console.log(product['delivery-time']);
+    
+    // 8d
+    const product1 = {
+        name : 'basketball',
+        price : 2095
+    };
+    const product2 = {
+        name : 'football',
+        price : 1995
+    };
+    function comparePrice(product1,product2){
+        if(product1.price < product2.price){
+            return product1.price;
+        }
+        return product2.price;
+    }
+
+    const price = comparePrice(product1,product2);
+    console.log(price);
+    // 8e
+    function isSameProduct(product1,product2){
+        if(product1.name === product2.name && product1.price === product2.price){
+            return true;
+        }
+        return false;
+    }
+    const is_same = isSameProduct(product1,product2);
+    console.log(is_same);
+
+    // 8f
+    const hello = 'HelLO JaY JR.';
+    console.log(hello.toLowerCase());
+
+    // 8g
+    const mood = 'Happy';
+    console.log(mood.repeat(5));
+
+</script>
+</html>

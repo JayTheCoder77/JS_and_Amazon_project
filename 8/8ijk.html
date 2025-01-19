@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+        8i and 8j and 8k sol
+    </title>
+  </head>
+  <body>
+    <button onclick="
+        guessMove('heads');
+        ">Heads</button>
+    <button onclick="
+    guessMove('tails');
+    ">Tails</button>
+  </body>
+    <script>
+      const score = JSON.parse(localStorage.getItem('guess')) || 
+      {
+        wins:0,
+        losses:0
+      };
+      // const score = {
+      //   wins:0,
+      //   losses:0
+      // };
+      const randomNumber = Math.random();
+      let result;
+
+      if (randomNumber < 0.5) {
+        result = 'heads';
+      } else {
+        result = 'tails';
+      }
+      function guessMove(guess){
+        if (guess === result) {
+          console.log('You win!');
+          score.wins +=1;
+        } else {
+          console.log('You lose!');
+          score.losses +=1;
+        }
+        alert(`WINS : ${score.wins} , Losses : ${score.losses}`);
+        localStorage.setItem('guess',JSON.stringify(score));
+    }
+    </script>
+</html>

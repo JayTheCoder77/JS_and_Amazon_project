@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 objects</title>
+    <style>
+        *{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>8-objects</h1>
+
+</body>
+<script>
+    // const product = {
+    //     name:'socks',
+    //     price:1090
+    // };
+    // console.log(product);
+    // console.log(product.name);
+    // console.log(product.price);
+    // product.name = 'football';
+    // console.log(product.name);
+    // product.for_sale = true;
+    // console.log(product);
+    // delete product.price;
+    // console.log(product);
+    // console.log(typeof product);
+
+    // const product = {
+    //     item : 'shirt',
+    //     'delivery-time' : '1 day',
+    //     rating:{
+    //         stars : 4.5,
+    //         count : 87
+    //     },
+    //     fun : function hello(){ // method
+    //         console.log('function inside object which is also known as method');
+    //     }
+    // };
+    // console.log(product['item']);
+    // console.log(product['delivery-time']);
+    // console.log(product.rating.stars);
+    // console.log(product.fun());
+    // console.log(typeof console);
+    // console.log(typeof console.log);
+
+    // // JSON
+    // console.log(typeof JSON.stringify(product));
+    // const jsonString  = JSON.stringify(product);
+    // console.log(JSON.parse(jsonString));
+    
+    // local storage - in rock paper scirssor project
+
+
+    // auto boxing
+
+    console.log('hello'.length);
+    console.log('hello'.toUpperCase());
+    // even if this is a string js wraps this string into an object
+    // works with booleans and numbers too but not with null and undefined
+
+    const obj1 = {
+        message : 'hello'
+    };
+    const obj2 = obj1; // copy by reference
+    // objs are references
+
+    obj1.message = 'jay jr.';
+    console.log(obj1);
+
+    // even if obj1 is const we were able to change its properties as the obj1 is just a reference 
+    console.log(obj2); // obj2 message also changed even if not done explicitly as obj2 was also just pointing to the same thing as obj1 
+
+    const obj3 = {
+        message : 'jay jr.'
+    };
+    console.log(obj3 == obj1); // false     we are comparing references
+    console.log(obj2 == obj1); // true
+    
+    const obj4 = {
+        message : 'jay jr.',
+        price : 799
+    };
+    //const message = obj4.message;
+    const {message} = obj4; // same as above
+    console.log(message);
+    const {price} = obj4;
+    console.log(price);
+
+    const obj5 = {
+        message : message,
+        // method : function f1(){
+        //     console.log('method');
+        // }
+        method(){   // same as above shorthand method
+            console.log('method');
+        }
+    };
+    console.log(obj5);
+    obj5.method();
+    </script>
+</html>

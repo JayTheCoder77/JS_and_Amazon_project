@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9 ex</title>
+</head>
+<body>
+    <!-- <button>9a</button>
+    <button class="js-9b">9b</button> -->
+    <!-- <button onclick="headsTails('heads')">heads</button>
+    <button onclick="headsTails('tails')" >tails</button>
+    <p class="js-result"></p> -->
+
+    <input onkeydown="
+    const keystroke = event.key;
+    enterkey(keystroke);
+    " type="text" placeholder="enter name">
+    <button onclick="displayName()">Submit</button>
+    <p class="js-display"></p>
+</body>
+<script>
+    // console.log(document.querySelector('button'));
+    // document.querySelector('.js-9b').
+    // innerHTML = '9b done!';
+    
+    // function headsTails(choice){
+    //     if(choice === 'heads'){
+    //     document.querySelector('.js-result')
+    //     .innerHTML = `You chose ${choice}`;
+    // }
+    // else{
+    //         document.querySelector('.js-result')
+    //         .innerHTML = `You chose ${choice}`;
+    //     }
+    // }
+
+    function enterkey(event){
+        if(event === 'Enter'){
+            displayName();
+        }
+    }
+
+    function displayName(){
+        const input = document.querySelector('input').value;
+        document.querySelector('.js-display').
+        innerHTML = `Your name is ${input}`;
+        ;
+    }
+
+</script>
+</html>

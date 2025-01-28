@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 Advanced Functions</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // function greeting(){
+    //     console.log('hello');
+    // }
+    // greeting();
+
+    // const num = 2;
+    // const function1 = function hello() {
+    //     console.log('hey');
+    // }
+    // console.log(function1);
+    // console.log(typeof function1);
+    // function1();
+
+    // const object1 = {
+    //     num : 2,
+    //     fun : function brotha(){
+    //         console.log('biro');
+    //     }
+    // };
+    // object1.fun();
+    // console.log(object1.fun);
+
+    // function display(params){
+    //     console.log(params);
+    // }
+    // display(2);
+
+
+    // function run(param){
+    //     param();
+    // }
+    // run(
+    //     function(){
+    //         console.log('callback function');
+    //         console.log('hello inside function as param');
+    //     }
+    // );
+    // setTimeout(function , time in miliseconds);
+    // asynchronous code - eg setTimeout and setInterval
+    // setTimeout(function(){
+    //     // this is synchronous code
+    //     console.log('timeout');
+    //     console.log('timeout2');
+    // } , 3000 );
+
+
+    // // synchronous code waits and then executes
+    // console.log('next line'); // doesnt wait for settimeout executes first instead
+
+
+    // // setinterval(function , time in ms);
+    // // setInterval(function () {
+    // //     console.log('interval');
+    // // } , 3000 );
+
+    // console.log('next line after set interval');
+
+    // array foreach
+    // [].foreach(function , index of a value)
+
+    [
+        'make dinner',
+        'wash dishes',
+        'watch yt'
+    ].forEach(
+        function(value,index){
+            if(value === 'wash dishes'){
+                return;
+            }
+            console.log(index);    
+            console.log(value);    
+        }
+    );
+
+    // for each doesnt have continue we use return instead
+    // for each doesnt have break use normal loops in that case
+
+</script>
+</html>

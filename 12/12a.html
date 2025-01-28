@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="js-start" onclick="changeStart()">Start</button>
+    <button class="js-cart" onclick="changeCart()">Add To Cart</button>
+    <p class="cart"></p>
+
+    <button class="add" onclick="message()">Add</button>
+    <button class="remove" onclick="message()">Remove</button>
+</body>
+<script>
+    const add = function Add(){
+        console.log(2+3);
+        // console.log(2+3);
+    };
+    // console.log(add);
+    // Add();
+
+    function runTwice(fun){
+        fun();
+        fun();
+    }
+    runTwice(function(){
+        console.log('12b');
+    });
+    runTwice(add);
+
+    function changeStart(){
+        const startElement = document.querySelector('.js-start');
+        setTimeout(
+            function(){
+                startElement.innerHTML = 'Loading.....';
+            }
+        ,1000);
+    
+        setTimeout(
+            function(){
+                startElement.innerHTML = 'Finished';
+            }
+        ,2000);
+    }
+    let timeoutId;
+    function changeCart(){
+        const cartElement = document.querySelector('.cart');
+        clearTimeout(timeoutId);
+        cartElement.innerHTML = 'Added';
+        timeoutId = setTimeout(
+            function(){
+                cartElement.innerHTML = '';
+            }
+        ,2000);
+    }
+
+    function message(){
+    let value = 2;
+    const titleElement = document.querySelector('title');
+    const addButtonElement = document.querySelector('.add'); 
+    const removeButtonElement = document.querySelector('.remove');
+
+
+    const updateTitle = function(){titleElement.innerHTML = value > 0 ? `(${value}) New Message(s)` : 'App';
+    }
+
+    if(addButtonElement){ 
+        value++;
+        updateTitle();
+    }
+    if(removeButtonElement){
+        value--;
+        updateTitle();
+    }
+    let toggle = true;
+    setInterval(
+        function(){
+            if (value > 0){
+            titleElement.innerHTML = toggle ? 'App' : ` (${value}) New Message(s)`;
+        }
+    }
+    ,1000);
+    }
+
+    
+</script>
+</html>

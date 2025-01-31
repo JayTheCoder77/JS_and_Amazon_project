@@ -1,5 +1,20 @@
 const products = [
   {
+    id: "e43638ce-6aa0-4b85-b27fc6",
+    image: "images/products/backpack.jpg",
+    name: "Black Arctic Fox Backpack",
+    rating: {
+      stars: 3.5,
+      count: 817
+    },
+    priceCents: 190,
+    keywords: [
+      "backpack",
+      "sports",
+      "apparel"
+    ]
+  },
+  {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
     image: "images/products/athletic-cotton-socks-6-pairs.jpg",
     name: "Black and Gray Athletic Cotton Socks - 6 Pairs",

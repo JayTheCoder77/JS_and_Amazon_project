@@ -1,3 +1,5 @@
 super simple dev js video 
 
 https://www.youtube.com/watch?v=EerdGm-ehJQ&t=76922s&pp=ygUZc3VwZXJzaW1wbGVkZXYgamF2YXNjcmlwdA%3D%3D
+
+make another repo for amazon and another repo for website clone using html css js
